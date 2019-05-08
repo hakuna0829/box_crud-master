@@ -1,0 +1,54 @@
+@import 'bootstrap/mixins';
+
+// show modal not looking like input form
+#content.show {
+  .form-control {
+    border: none;
+    @include box-shadow(none);
+  }
+}
+
+// nested form inputs looking the same as root form inputs
+.form-group .form-group {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.form-horizontal .control-label {
+  padding: 7px 0px;
+  line-height: 20px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  ont-weight: normal;
+  text-shadow: none;
+  color: #595959;
+}
+
+[data-bb-handler|=delete]{
+  float: left;
+  margin-left: 0 !important;
+}
+
+[data-bb-handler|=close]{
+  float: right;
+  margin-left: 10px;
+}
+
+.form-horizontal .checkbox, .form-horizontal .checkbox > label {
+  padding: 0;
+}
+
+.form-horizontal .checkbox, .form-horizontal .checkbox > label {
+  margin-left: 10px;
+}
+
+.bb-alert {
+  position: fixed;
+  top: 65px;
+  right: 15px;
+  margin-bottom: 0;
+  font-size: 1.2em;
+  padding: 1em 1.3em;
+  z-index: 9999;
+}
